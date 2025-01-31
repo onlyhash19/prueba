@@ -1,0 +1,64 @@
+body {
+    background-color: beige;
+}
+
+/* Si los elementos que estan dentro del flexbox no tienen tamaño, estos van abarcar el tamaño del flexbox */
+.flex-container {
+    border: 1px solid black;
+    background: #ccc;
+    padding: 20px;
+    display: flex;
+   
+    /* flex-direction: row;     Acomodar el flexbox ya sea en columnas o en filas */
+    /* flex-wrap: wrap;     Acomodar el flexbox de forma en la que, entren todos los componentes */
+    flex-flow: row wrap;    /* Propiedad para combinar la direction y el wrap */
+    justify-content: center;     /* Acomodar los elementos en el flexbox */
+    /* align-items: center;     Con esta propiedad se pueden centrar los elementos y van a tomar el tamaño adecuado para el flexbox */
+    align-content: center;    /* Propiedad para ajustar los espacios entre cada elemento*/
+
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.caja {
+    border: 1px solid rgb(70, 69, 69);
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 200px;
+    /* height: 120px; */
+    line-height: 200px;
+    text-align: center;
+    margin: 5px;
+    overflow: hidden;
+}
+
+/* Cada elemento dentro del container se puede asignar diferente orden */
+.c1 {
+    background-color: lightblue;
+    order: 5;
+    flex-grow: 5; /* Propiedad para que el elemento tenga prioridad en su tamaño ya sea asignado */
+}
+.c2 {
+    background-color: lightcoral;
+    order: 4;
+    flex-grow: 1;
+}
+.c3 {
+    background-color: lightgreen;
+    order: 3;
+    flex-grow: 1;
+    flex-basis: 50%; /* Propiedad para compartir el tamaño del flexbox en relacion con los demas elementos que hay */
+}
+.c4 {
+    background-color: purple;
+    order: 2;
+    flex-grow: 5;
+}
+.c5 {
+    background-color: violet;
+    order: 1;
+    flex-grow: 1;
+}
